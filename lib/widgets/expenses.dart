@@ -17,6 +17,14 @@ class _ExpensesState extends State<Expenses> {
       date: DateTime.now(),
       category: Category.bills,
     ),
+
+    Expense(
+      title: 'Party',
+      amount: 15.69,
+      date: DateTime.now(),
+      category: Category.leisure,
+    ),
+
   ];
   @override
   Widget build(BuildContext context) {
