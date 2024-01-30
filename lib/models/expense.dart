@@ -1,10 +1,25 @@
 import 'package:uuid/uuid.dart';
+import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
-import 'package:expense_tracker/widgets/expenses.dart';
+final formatter = DateFormat.yMd();
+
+
 
 const uuid = Uuid();
 
 enum Category {work, food, leisure, travel, bills,}
+
+const categoryIcons = {
+  Category.food: Icons.dining_outlined,
+  Category.bills: Icons.payments_outlined,
+  Category.work: Icons.work,
+  Category.travel: Icons.flight_takeoff,
+  Category.leisure: Icons.movie,
+
+
+
+};
 
 class Expense{
   Expense({
@@ -21,4 +36,8 @@ class Expense{
   final double amount;
   final DateTime date;
   final Category category;
+
+  String get formattedDate {
+    return formatter.format(date);
+  }
 }
