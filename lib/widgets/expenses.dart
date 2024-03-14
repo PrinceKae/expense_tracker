@@ -80,7 +80,7 @@ class _ExpensesState extends State<Expenses> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: _openAddExpenseOverlay,
-        backgroundColor: const Color.fromARGB(255, 0, 170, 130),
+        backgroundColor: Theme.of(context).colorScheme.secondaryContainer,
         child: const Icon(Icons.add),
 
       ),
